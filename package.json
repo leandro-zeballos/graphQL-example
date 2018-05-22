@@ -1,0 +1,29 @@
+{
+  "name": "graphql-example",
+  "version": "1.0.0",
+  "description": "GraphQL example",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "json:server": "json-server --watch db.json",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leandro-zeballos/graphQL-example.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leandro-zeballos/graphQL-example/issues"
+  },
+  "homepage": "https://github.com/leandro-zeballos/graphQL-example#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "express": "^4.16.3",
+    "express-graphql": "^0.6.12",
+    "graphql": "^0.8.2",
+    "json-server": "^0.9.4",
+    "nodemon": "^1.17.4"
+  }
+}
