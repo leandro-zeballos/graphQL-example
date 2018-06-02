@@ -1,37 +1,25 @@
 {
   "programmers": [
     {
-      "id": "1",
+      "id": 1,
       "name": "Alex",
       "age": 30,
-      "programmingLanguagesId": 1
+      "programmingLanguageId": 1
     },
     {
       "id": "2",
       "name": "Bill",
       "age": 33,
-      "programmingLanguagesId": 2
-    },
-    {
-      "name": "Leandro2",
-      "age": 33,
-      "programmingLanguagesId": "Javscript",
-      "id": "SyZUtPWJX"
-    },
-    {
-      "name": "Leandro2",
-      "age": 33,
-      "programmingLanguagesId": "Javscript",
-      "id": "r1ePKP-kQ"
+      "programmingLanguageId": 2
     }
   ],
   "programmingLanguages": [
     {
-      "id": "1",
+      "id": 1,
       "name": "Javascript"
     },
     {
-      "id": "2",
+      "id": 2,
       "name": "Php"
     }
   ]
