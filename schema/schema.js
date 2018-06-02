@@ -16,13 +16,13 @@
    id: { type: GraphQLString },
    name: { type: GraphQLString },
    age: { type: GraphQLInt },
-   programmingLanguage: { 
+   programmingLanguage: {
     type: ProgrammingLanguageType,
     resolve(parentValue, args) {
      return axios.get(`${BASE_URL}/programmers/${parentValue.id}/programmingLanguages`)
            .then(res => res.data)
     }
-   }   
+   }
   })
  });
 
@@ -31,26 +31,25 @@
   fields: () => ({
    id: { type: GraphQLString },
    name: { type: GraphQLString },
-   programmers: { 
+   programmers: {
     type: ProgrammingLanguageType,
     resolve(parentValue, args) {
      return axios.get(`${BASE_URL}/programmers/${parentValue.id}`)
            .then(res => res.data)
     }
-   }  
+   }
   })
  });
 
- const RootQuery = new GraphQLObjectType({ 
+ const RootQuery = new GraphQLObjectType({
    name: 'RootQueryType',
    fields: () => ({
-    programmingLanguage: { 
+    programmingLanguage: {
        type: ProgrammingLanguageType,
-       args: { 
+       args: {
         id: { type: GraphQLString }
        },
        resolve(parentValue, args) {
-        console.log(`${BASE_URL}/programmingLanguages/${args.id}`);
         return axios.get(`${BASE_URL}/programmingLanguages/${args.id}`)
            .then(resp => resp.data);
        }
@@ -61,10 +60,8 @@
        id: { type: GraphQLString }
       },
       resolve(parentValue, args) {
-       console.log("programmers QL " + `${BASE_URL}/programmers`);
        return axios.get(`${BASE_URL}/programmers/${args.id}`)
           .then(res => {
-           console.log(res);
            return res;
           })
           .then(resp => resp.data);
@@ -72,7 +69,7 @@
      }
    })
  });
- 
+
  const mutation = new GraphQLObjectType({
   name: 'Mutation',
   fields: {
@@ -100,8 +97,8 @@
    }
   }
  });
- 
+
  module.exports = new GraphQLSchema({
   mutation,
-  query: RootQuery 
+  query: RootQuery
  });
