@@ -1,13 +1,13 @@
 # GraphQL-example
-## This is an express application for learning how to write a GraphQL Schema over a json-server database.
+Express application for learning how to write a GraphQL Schema over a json-server database.
 
 
-###Query examples
+##### Query examples
 Note: When running the queries/mutations change `[value]` for the actual value and type
 
-####Query:
+##### Query:
 
-`
+```
 programmers(id:[value]) {
    id,
    name,
@@ -20,10 +20,10 @@ programmers(id:[value]) {
      }
    }
  }
-`
+```
 
 Response:
-`
+```
 {
   "data": {
     "programmers": {
@@ -46,21 +46,23 @@ Response:
     }
   }
 }
-`
+```
 
-####MUTATIONS
-`mutation {
+##### MUTATIONS
+```
+mutation {
  addPrgrammer(name: [value], age: [value], programmingLanguageId:[value]) {
  	name,
   age,
 	}
 }
-`
+```
 
-`mutation {
+```
+mutation {
  deleteProgrammer(id:[value]) {
  	name,
   age,
 	}
 }
-`
+```
