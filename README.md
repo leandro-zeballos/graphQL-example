@@ -8,10 +8,12 @@ npm install
 
 ### Run the example
 1. To run the example first you have to run the backend server providing access to the json-db.
-```npm run json:server
+```
+npm run json:server
 ```
 2. Run the express app that serves `graphiql` which is development tool that allows us to run queries against our development server.
-```npm run dev
+```
+npm run dev
 ```
 
 3. Open the browser and navigate to `http://localhost:3005/graphql`
@@ -62,7 +64,7 @@ Response:
 }
 ```
 
-##### Mutations
+##### Mutation examples
 ```
 mutation {
  addPrgrammer(name: [value], age: [value], programmingLanguageId:[value]) {
