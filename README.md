@@ -48,7 +48,7 @@ Response:
 }
 ```
 
-##### MUTATIONS
+##### Mutations
 ```
 mutation {
  addPrgrammer(name: [value], age: [value], programmingLanguageId:[value]) {
